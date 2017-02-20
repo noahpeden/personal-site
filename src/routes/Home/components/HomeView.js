@@ -5,6 +5,7 @@ import github from '../assets/gitHub.svg'
 import linkedin from '../assets/linkedin.svg'
 import twitter from '../assets/twitter.svg'
 import social from '../assets/social.jpg'
+import { IndexLink, Link } from 'react-router'
 import './HomeView.scss'
 
 export const HomeView = () => (
@@ -23,28 +24,27 @@ export const HomeView = () => (
     </ul>
     </div>
   <div className="contact">
-    <a href="mailto:noahpede@gmail.com" className="email-me">
-        <div className="hovereffect">
-            <img className="img-responsive" src={EagleImg} alt=""/>
-                <div className="overlay">
-                    <h2 className="contact-me">Contact Me</h2>
+
+        <div className="hovereffect1">
+            <img className="img-responsive1" src={EagleImg} alt=""/>
+                <div className="overlay1">
+                  <h2 className="contact-me">Contact Me</h2>
     				<p>
-    					Email me!
+    				  <a href="mailto:noahpede@gmail.com" className="email-me">Email me!</a>
     				</p>
                 </div>
         </div>
-      </a>
   </div>
   <div className="Projects">
       <div className="hovereffect1">
           <img className="img-responsive1" src={GerImg} alt=""/>
             <div className="overlay1">
                 <h2>PROJECTS</h2>
-                <a href="#" className="view-projects">
+                <Link to="/projects">
 				 <p>
 					View My Projects Here
 				</p>
-      </a>
+      </Link>
       </div>
     </div>
   </div>
